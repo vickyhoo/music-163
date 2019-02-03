@@ -129,12 +129,12 @@ class Crawler():
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print("Please input playlist url.")
-        print("Example: https://music.163.com/playlist?id=xxx")
+        print("Please input playlist id.")
+        # print("Example: https://music.163.com/playlist?id=xxx")
         sys.exit()
 
     print("playlist: " + sys.argv[1])
-    playlist = sys.argv[1]
+    playlist = 'https://music.163.com/playlist?id=' + sys.argv[1]
     crawler = Crawler()
     music_data = crawler.get_music_data(playlist)
     crawler.get(music_data)
