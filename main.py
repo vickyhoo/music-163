@@ -11,9 +11,10 @@ from bs4 import BeautifulSoup
 from datetime import date
 from Crypto.Cipher import AES
 from urllib.parse import urlencode
+from pathlib import Path
 
 
-download_path = "/Users/vic.zhang/Downloads/music-" + str(date.today())
+download_path = str(Path.home()) + "/Downloads/music-" + str(date.today())
 user_agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.82 Safari/537.36'
 
 
